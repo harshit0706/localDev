@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Query Selector" class="slds-m-around_medium">
+        <h1>H1 tag</h1>
+        <template for:each={carList} for:item="car">
+            <div class="carName" key={car} title={car}>{car}</div>
+        </template>
+        <div class="child" lwc:dom="manual"></div>
+        <button onclick={clickHandler}>Fetch</button>
+    </lightning-card>
+
+    
+</template>

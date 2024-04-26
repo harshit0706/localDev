@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="wire picklistvalues">
+        <div class="slds-m-around_medium">
+            <lightning-combobox
+                                name="Industry"
+                                label="Industry"
+                                value={selectedIndustry}
+                                placeholder="Select Industry"
+                                options={industryOptions}
+                                onchange={handleChange} >
+            </lightning-combobox>
+        </div>
+
+        <div>
+            selected Industry : {selectedIndustry}
+        </div>
+    </lightning-card>
+    
+
+</template>

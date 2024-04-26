@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="SignUp Form" class="slds-m-around_medium">
+        <lightning-input type="text" label="Name"></lightning-input>
+        <lightning-input type="email" label="Email address"></lightning-input>
+        <lightning-input type="tel" label="Phone Number" name="phone3" value="343-343-3434" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></lightning-input>
+        <lightning-input type="password" label="Enter Password" name="input6" required value="initial value" ></lightning-input>
+
+        <lightning-button variant="Brand"
+                           label="Back " 
+                           title="Back" 
+                           onclick={handleClick} 
+                           class="slds-m-left_x-small">
+        </lightning-button>
+   </lightning-card>
+</template>

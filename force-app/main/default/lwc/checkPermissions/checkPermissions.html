@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="User Permission Demo">
+        <template if:true={hasViewAllDataAvailable}>
+            <p>User has permission to view all data</p>
+        </template>
+        <template if:false={hasViewAllDataAvailable}>
+            <p>User has no permission to view all data</p>
+        </template>
+
+    </lightning-card>
+</template>

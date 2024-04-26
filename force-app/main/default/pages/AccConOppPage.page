@@ -1,0 +1,43 @@
+<apex:page controller="VfController" extensions="leadExtension">
+    <apex:tabPanel >
+        <apex:tab label="tab1">
+        <apex:form >
+            <apex:pagemessage severity="info" strength="2">
+            Simple message
+            </apex:pagemessage>
+            
+                <apex:pageBlock title="Account, Contact and Opportunity setup page">
+                    <apex:pageBlockSection title="Account setup" collapsible="False">
+                        <apex:inputText value="{!accName}" label="Account Name" required="true"/>
+                        <apex:inputText value="{!accEmployees}" label="Number of Employees"/>
+                        
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Contact setup" collapsible="false">
+                        <apex:inputText value="{!conName}" label="Contact Name" required="true"/>
+                        <apex:inputText value="{!conEmail}" label="Contact Email"/>
+                        
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="Opportunity setup" collapsible="false">
+                        <apex:inputText value="{!oppNAme}" label="Opportunity Name" required="true"/>
+                        <apex:inputText value="{!oppAmount}" label="Opportunity Amount"/>
+                        
+                    </apex:pageBlockSection>
+                    <apex:pageBlockButtons >
+                        <apex:commandButton action="{!saveRecord}" value="Save all the Records" />
+                    </apex:pageBlockButtons>
+                </apex:pageBlock>
+            </apex:form>
+            </apex:tab>  
+                
+        
+        <apex:tab label="Lead Info">
+                <apex:pageBlock >
+                    <apex:pageBlockTable value="{!lList}" var="l">
+                        <apex:column value="{!l.Name}"/>
+                        <apex:column value="{!l.Status}"/>
+        
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+        </apex:tab>
+    </apex:tabPanel>    
+</apex:page>

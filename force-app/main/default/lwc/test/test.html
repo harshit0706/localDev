@@ -1,0 +1,60 @@
+<!--
+    @description       :
+    @author            : Sebastian.Y.Raggio.-ND@disney.com
+    @group             :
+    @last modified on  : 01-25-2022
+    @last modified by  : Sebastian.Y.Raggio.-ND@disney.com
+-->
+
+<template>
+    <lightning-quick-action-panel header="MODAL TITLE">
+      <lightning-layout class="slds-m-bottom_medium">
+        <lightning-layout-item flexibility="auto" padding="around-small" size="4">
+          <!-- <c-datg-lookup
+            s-object-api-name="DATG_Approval_Matrix__c"
+            output-result-fields={mtxOutputResultFields}
+            search-fields={mtxSearchFields}
+            output-structure="\${DATG_Description__c}"
+            criteria={mtxSearchCriteria}
+            onselected={handleSelectProxyUser}
+            custom-label={labels.PROXY_USER}
+            show-label>
+          </c-datg-lookup> -->
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="auto" padding="around-small" size="4">
+          <!-- <c-datg-lookup
+            s-object-api-name="DATG_Approval_Matrix__c"
+            output-result-fields={mtxOutputResultFields}
+            search-fields={mtxSearchFields}
+            output-structure="\${DATG_Description__c}"
+            criteria={mtxSearchCriteria}
+            onselected={handleSelectAdHocUser}
+            custom-label={labels.AD_HOC_USER}
+            show-label>
+          </c-datg-lookup> -->
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="auto" padding="around-small" size="4" style="margin-top: -5px;">
+          <lightning-input required type="text" max-length={sapHeaderFieldLength} label="SAP_DOC_HEADER_TEXT" value="SAP_DOC_HEADER_TEXT" onchange={handleChange}>
+          </lightning-input>
+        </lightning-layout-item>
+      </lightning-layout>
+  
+      <lightning-card class="slds-float_right">
+        <lightning-button
+          class="slds-m-top_small"
+          style="margin-right: 10px"
+          label="CANCEL_BUTTON"
+          onclick={closeAction}
+          disabled={loading}>
+        </lightning-button>
+        <lightning-button
+          class="slds-m-top_small"
+          variant="brand"
+          type="submit"
+          label="SUBMIT_BUTTON"
+          onclick={handleSave}
+          disabled={loading}>
+        </lightning-button>
+      </lightning-card>
+    </lightning-quick-action-panel>
+  </template>

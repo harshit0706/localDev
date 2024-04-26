@@ -1,0 +1,18 @@
+<apex:page standardController="Account" recordSetVar="xyz">
+<apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!xyz}" var="x">
+             <apex:column value="{!x.Name}" headerValue="Account"/>  
+             <apex:column headerValue="Editable Account">
+                 <apex:inputField value="{!x.Name}"/>
+             </apex:column>
+             <apex:column value="{!x.Phone}"/>
+             <apex:column value="{!x.Industry}"/>
+             <apex:column value="{!x.Type}"/>            
+        </apex:pageBlockTable>
+        
+        <apex:commandButton value="Previous" action="{!previous}"/>
+        <apex:commandButton value="Next" action="{!next}"/>
+    </apex:pageBlock>
+</apex:form>  
+</apex:page>

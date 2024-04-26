@@ -1,0 +1,26 @@
+<template>
+    <!-- <div>LWC of {name}</div> -->
+    
+    <lightning-card title="Two way data binding"> 
+        <lightning-input type="text" 
+                         label="Enter some text" 
+                         onkeyup={changeHandler} 
+                         class="slds-m-around_medium slds-m-bottom_medium">
+        </lightning-input>
+        <div>{fullName} is {message}</div>
+    </lightning-card>
+
+    <lightning-card title="@track properties"> 
+        <lightning-input type="text" 
+                         label="Enter some text" 
+                         onkeyup={trackHandler} 
+                         class="slds-m-around_medium slds-m-bottom_medium">
+        </lightning-input>
+        <div>{address.city} is the city</div>
+    </lightning-card>
+    <lightning-card title="getter demo"> 
+        <div>first Users is {firstUsers}</div>
+        <div>multiply is {multiply}</div>
+    </lightning-card>
+
+</template>

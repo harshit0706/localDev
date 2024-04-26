@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForAllPageTypes, lightning:isUrlAddressable" access="global">
+    <aura:attribute name="id" type="string"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <div class="slds-card">
+        <div>Coming from LWC and record id is {!v.id}</div>
+    </div>
+</aura:component>	

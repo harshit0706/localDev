@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Slot parent component">
+        <div class="slds-p-around_medium">
+            <c-slot-child>
+                <strong slot="first">SFDC training</strong>
+                <strong slot="second">age is 25</strong>
+                <p slot="footer">footer data from parent</p>
+            </c-slot-child>
+        </div>
+        <div class="slds-p-around_medium">
+            <c-slot-child>
+                <strong slot="first">SFDC training</strong>
+                <strong slot="second">age is 25</strong>
+                <!-- <p slot="footer">footer data from parent</p> -->
+            </c-slot-child>
+        </div>
+    </lightning-card>
+</template>
